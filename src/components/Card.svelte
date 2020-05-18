@@ -3,9 +3,14 @@
     export let title = "um titulo padrão";
     export let cover = "img1.jpg";
     export let membersOnly = true;
+    export let id = 0;
+    let something = "Something";
+
+    const clickHandler = () => console.log(id);
 
 </script>
-
+<a href="#" 
+on:click|preventDefault={clickHandler}>
 <div class="max-w-sm rounded overflow-hidden shadow-lg">
   <img class="w-full" src="/img/{cover}" alt="Sunset in the mountains">  
   <div class="px-6 py-4">
@@ -25,3 +30,4 @@
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
   </div>
 </div>
+</a>
