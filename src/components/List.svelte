@@ -16,6 +16,6 @@ const list = [
 <main class="flex container mx-auto">
 <div class="grid grid-cols-2 gap-4"></div>
 {#each list as item}
-	<Card {... item} />
+	<Card {... item} on:cardClicked />
 {/each}
 </main>

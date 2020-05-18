@@ -1,4 +1,6 @@
 <script>
+    
+    import { createEventDispatcher } from 'svelte';
 
     export let title = "um titulo padrão";
     export let cover = "img1.jpg";
@@ -6,12 +8,12 @@
     export let id = 0;
     let something = "Something";
 
-    const clickHandler = () => console.log(id);
+    const dispatch = createEventDispatcher();
+
+    const clickHandler = ev => dispatch('cardClicked', { ev, id });
 
 </script>
-<a href="#" 
-on:click|preventDefault={clickHandler}>
-<div class="max-w-sm rounded overflow-hidden shadow-lg">
+<div class="max-w-sm rounded overflow-hidden shadow-lg cursor-pointer" on:click|preventDefault={clickHandler}>
   <img class="w-full" src="/img/{cover}" alt="Sunset in the mountains">  
   <div class="px-6 py-4">
     <div class="font-bold text-xl mb-2">{title}</div>
@@ -30,4 +32,3 @@ on:click|preventDefault={clickHandler}>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
   </div>
 </div>
-</a>
