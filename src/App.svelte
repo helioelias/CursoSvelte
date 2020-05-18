@@ -1,10 +1,18 @@
 <script>
 
-import Compo1 from './components/Compo1.svelte';
-import Compo2 from './components/Compo2.svelte';
+import Card from './components/Card.svelte';
+
+const data = [
+	{title: 'Titulo 1', cover: 'img1.jpg'},
+	{title: 'Titulo 2', cover: 'img2.jpg'},
+	];
+
+const [card1, card2] = data;
 
 </script>
+
 <main class="flex container mx-auto">
-	<Compo1 /> <br>
-	<Compo2 />
+<div class="grid grid-cols-2 gap-4"></div>
+	<Card {... card1} />
+	<Card {... card2} />
 </main>
