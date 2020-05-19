@@ -16,6 +16,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "pretty-print-json": "^0.2.1",
     "sirv-cli": "^0.4.4"
   }
 }
