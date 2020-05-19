@@ -1,5 +1,5 @@
 <script>
-
+    
     import PrettyPrint from "./components/PrettyPrint.svelte";
 
     let button;
@@ -15,14 +15,9 @@
     };
 
     const submit = () => {
-        button.disabled = true;
-        setTimeout(() =>{
-            button.disabled = false;
-            alert(`Estes dados serão enviados para a API: ${JSON.stringify(formData)}`);
-        }, 1000);
+        alert(`Estes dados serão enviados para a API: ${JSON.stringify(formData)}`);
     };
-
-
+    
 </script>
 
 <form on:submit|preventDefault={submit}>
