@@ -1,14 +1,13 @@
 
 <script>
-
-import { fetchMovies } from '../../api/movie-api';
+import {createEventDispatcher} from 'svelte'
 
 let term = 'pulp';
-let movies = [];
+
+const dispatch = createEventDispatcher();
 
 const search = async () => {
-    const res = await fetchMovies(term);
-    movies = res.data.results;
+    dispatch('doSearch', { term: term });
 }
 
 </script>
@@ -29,9 +28,3 @@ const search = async () => {
         </button>
     </form>
 </div>
-
-{#each movies as movie}
-<ul>
-    <li>{movie.title}</li>
-</ul>
-{/each}
