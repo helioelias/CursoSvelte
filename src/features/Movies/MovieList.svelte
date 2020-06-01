@@ -1,8 +1,10 @@
 <script>
-
+import { movies } from '../../store';
 import MovieCard from './MovieCard.svelte';
 
-export let movies = [];
+
+// $movies o caracter $ quando associado a uma função que retorna
+// permite que os dados sejam extraidos ou convertidos para objeto
 
 </script>
 
@@ -12,9 +14,9 @@ export let movies = [];
             Nenhum filme encontrado
         </h3>
         <ul class="m-0 xl:grid xl:grid-cols-2">
-        {#each movies as movie}
+        {#each $movies as movie}
             <li class="p-1 mx-0 my-3 bg-white shadow cursor-pointer xl:mx-3 sm:rounded-lg xl:justify-between">
-                <MovieCard />
+                <MovieCard {movie} />
             </li>
         {/each}
         </ul>
