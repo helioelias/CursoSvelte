@@ -1,16 +1,17 @@
 
 <script>
 
-import { fetchMovies } from '../../api/movie-api';
+import { fetchMovies, resetMovies } from '../../api/movie-api';
 
-let term = 'pulp';
+let term = '';
 
 const search = async () => {
     fetchMovies(term);
 };
 
-fetchMovies(term);
-
+$: if(term === "") {
+    resetMovies();
+}
 </script>
 <div class="mt-3">
     <form on:submit|preventDefault={search} class="flex mx-2 mt-1 rounded-md shadow-sm xl:w-1/2 md:mx-auto">

@@ -1,7 +1,8 @@
 import { writable, derived } from 'svelte/store';
 
 export const INITIAL_STATE = {
-    movies: []
+    movies: [],
+    wasSearched: false
 };
 
 
