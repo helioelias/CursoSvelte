@@ -3,11 +3,13 @@
 
 import { fetchMovies, resetMovies } from '../../api/movie-api';
 
-let term = '';
+let term = 'star';
 
 const search = async () => {
     fetchMovies(term);
 };
+
+fetchMovies(term);
 
 $: if(term === "") {
     resetMovies();
