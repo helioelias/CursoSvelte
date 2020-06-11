@@ -1,9 +1,9 @@
 import "@testing-library/jest-dom/extend-expect";
 import  { render, fireEvent } from "@testing-library/svelte";
-import MovieSearch from "../features/Movies/MovieSearch.svelte";
-jest.mock('../api/movie-api');
-import { fetchMovies, resetMovies } from '../api/movie-api';
-import { store, INITIAL_STATE } from '../store'
+import MovieSearch from "../Movies/MovieSearch.svelte";
+jest.mock('../../api/movie-api');
+import { fetchMovies, resetMovies } from '../../api/movie-api';
+import { store, INITIAL_STATE } from '../../store'
 
 describe("MovieSearch", () => {
 

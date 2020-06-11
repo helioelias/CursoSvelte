@@ -12,7 +12,7 @@ import MovieList from './MovieList.svelte';
             <MovieSearch />
         </div>
         <div data-testid="movie-list">
-           div
+            <MovieList />
         </div>
         </div>
     </div>
