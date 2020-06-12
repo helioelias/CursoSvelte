@@ -2,8 +2,10 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "watch:tailwind": "postcss tailwind.base.css -o public/index.css",
+    "build:tailwind": "NODE_ENV=production postcss tailwind.base.css -o public/index.css",
+    "build": "yarn build:tailwind && rollup -c",
+    "dev": "yarn watch:tailwind && rollup -c -w",
     "start": "sirv public",
     "test": "jest src --watchAll"
   },
@@ -36,17 +38,20 @@
     "@babel/preset-env": "^7.10.2",
     "@rollup/plugin-commonjs": "11.0.2",
     "@rollup/plugin-node-resolve": "^7.0.0",
+    "@tailwindcss/ui": "^0.3.0",
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/svelte": "^3.0.0",
     "axios": "^0.19.2",
     "babel-jest": "^26.0.1",
     "jest": "^26.0.1",
+    "postcss-cli": "^7.1.1",
     "rollup": "^1.20.0",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
     "svelte": "^3.0.0",
-    "svelte-jester": "^1.0.6"
+    "svelte-jester": "^1.0.6",
+    "tailwindcss": "^1.4.6"
   },
   "dependencies": {
     "pretty-print-json": "^0.2.1",
