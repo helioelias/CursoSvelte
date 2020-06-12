@@ -18,7 +18,7 @@ store.subscribe(state => {
     <div class="flex flex-col md:flex-row">
     {#if movie.backdrop_path }
         <div class="flex-shrink-0">
-            <img class="rounded-lg md:w-56 md:rounded" src={`${BACKDROP_BASE_URL}/${movie.backdrop_path}`} alt={`Poster: ${movie.title}`} title={`Poster: ${movie.title}`} />
+            <img class="rounded-lg md:w-56 md:rounded" src={`${BACKDROP_BASE_URL}${movie.backdrop_path}`} alt={`Poster: ${movie.title}`} title={`Poster: ${movie.title}`} />
         </div>
     {/if}
         <div class="w-full md:ml-6">
