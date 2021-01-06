@@ -41,7 +41,7 @@
     "@tailwindcss/ui": "^0.3.0",
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/svelte": "^3.0.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-jest": "^26.0.1",
     "jest": "^26.0.1",
     "postcss-cli": "^7.1.1",
