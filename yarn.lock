@@ -4337,9 +4337,9 @@ svelte-jester@^1.0.6:
   dependencies:
     cosmiconfig "^6.0.0"
 
-svelte@^3.0.0:
-  version "3.22.2"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.22.2.tgz#06585244191bf7a112af2a0025610f33d77c3715"
+svelte@^3.49.0:
+  version "3.49.0"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.49.0.tgz#5baee3c672306de1070c3b7888fc2204e36a4029"
 
 symbol-tree@^3.2.4:
   version "3.2.4"
